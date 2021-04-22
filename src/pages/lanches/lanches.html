@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Lanches</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let item of items">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="{{item.src}}" alt="{{item.alt}}">
+      </ion-thumbnail>
+      <h2>{{item.titulo}}</h2>
+      <p><b>Preço:</b> R$ {{item.preco}}</p>
+      <button ion-button item-end color="primary" (click)="abrirDetalhes(item)">Vizualizar</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

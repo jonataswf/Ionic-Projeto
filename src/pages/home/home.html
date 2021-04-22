@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color = 'primary'>
+    <button ion-button menuToggle> <ion-icon name="menu"></ion-icon>
+    </button> 
+    <ion-title>
+      Jon's Restaurante
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides pager>
+    <ion-slide *ngFor="let item of items">
+      <img style="height: 250px" [src]="item.src1" [alt]="item.alt1"/>
+      <h2 [innerHTML]="item.titulo"></h2>
+      <p [innerHTML]="item.descSlide"></p>
+      <button ion-button color = "primary" (click)="abrirPromo(item)">Ver Detalhes</button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
